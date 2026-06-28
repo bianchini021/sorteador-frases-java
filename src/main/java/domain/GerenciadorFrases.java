@@ -11,7 +11,7 @@ public class GerenciadorFrases {
     public GerenciadorFrases(){
         this.frases = new ArrayList<>(List.of("O sucesso é a soma de pequenos esforços repetidos dia após dia.",
                 "A melhor maneira de prever o futuro é criá-lo.",
-                "A persistÇencia é o caminho êxito."));
+                "A persistência é o caminho êxito."));
     }
 
     public void adicionarFrase(String frase){
