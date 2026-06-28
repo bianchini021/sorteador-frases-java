@@ -11,21 +11,19 @@ public class JanelaSorteio {
     private GerenciadorFrases gerenciador;
 
     public JanelaSorteio() {
-        // 1. Ativa o visual moderno nativo do seu Sistema Operacional
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
-            // Se falhar, ele apenas mantém o padrão cinza sem quebrar o app
         }
 
         this.gerenciador = new GerenciadorFrases();
 
         // Configurações da Janela Principal (Fundo Escuro/Moderno)
         this.janela = new JFrame("Sorteador de Frases");
-        this.janela.setSize(550, 300); // Um pouco maior para respirar melhor
+        this.janela.setSize(550, 300);
         this.janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.janela.setLayout(new BorderLayout(20, 20));
-        this.janela.getContentPane().setBackground(new Color(245, 247, 250)); // Fundo cinza bem claro/moderno
+        this.janela.getContentPane().setBackground(new Color(245, 247, 250));
         this.janela.setLocationRelativeTo(null);
 
         // Painel interno para dar uma "margem" elegante nas bordas
@@ -35,15 +33,15 @@ public class JanelaSorteio {
 
         // Componente de Texto (Fonte mais limpa e cor suave)
         this.labelFrase = new JLabel("Clique abaixo para sortear!", SwingConstants.CENTER);
-        this.labelFrase.setFont(new Font("Segoe UI", Font.ITALIC, 18)); // Fonte moderna do Windows
-        this.labelFrase.setForeground(new Color(44, 62, 80)); // Azul escuro elegante em vez de preto puro
+        this.labelFrase.setFont(new Font("Segoe UI", Font.ITALIC, 18));
+        this.labelFrase.setForeground(new Color(44, 62, 80));
 
         // Componente do Botão (Estilizado)
         this.botaoSortear = new JButton("Sortear Frase");
         this.botaoSortear.setFont(new Font("Segoe UI", Font.BOLD, 14));
-        this.botaoSortear.setBackground(new Color(52, 152, 219)); // Azul destacado
+        this.botaoSortear.setBackground(new Color(52, 152, 219));
         this.botaoSortear.setForeground(Color.BLACK); // Texto branco
-        this.botaoSortear.setPreferredSize(new Dimension(0, 45)); // Botão mais alto/robusto
+        this.botaoSortear.setPreferredSize(new Dimension(0, 45));
         this.botaoSortear.setFocusable(false);
 
         // Ação do clique
@@ -53,7 +51,6 @@ public class JanelaSorteio {
                     + fraseSorteada + "</div></html>");
         });
 
-        // Montando os componentes dentro do painel com margem
         painelConteudo.add(labelFrase, BorderLayout.CENTER);
         painelConteudo.add(botaoSortear, BorderLayout.SOUTH);
 
